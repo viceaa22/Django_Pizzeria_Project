@@ -1,0 +1,18 @@
+<p>Pizzeria</p>
+
+{% extends "pizzas/base.html" %}
+
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">Choose Your Pizza.</h1>
+        
+        <p class="lead">View a list of available pizzas. 
+            Choose what toppings you like on each pizza.
+            Provide comments and suggestions for each pizza.</p>
+            
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+            role="button">Register &raquo;</a>
+    
+    </div>
+
+{% endblock page_header %}
