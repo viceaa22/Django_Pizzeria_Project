@@ -4,7 +4,7 @@ from django.db import models
 
 class Pizza(models.Model):
     """Type of pizzas."""
-    text = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -13,7 +13,7 @@ class Pizza(models.Model):
 
 class Topping(models.Model):
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
-    text = models.TextField()
+    name = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
