@@ -24,7 +24,7 @@ def pizza(request, pizza_id):
     
     toppings = pizza.topping_set.order_by('-date_added')
     context = {'pizza': pizza, 'toppings': toppings}
-    return render(request, 'pizzas/topic.html', context)
+    return render(request, 'pizzas/pizza.html', context)
 
 @login_required
 def new_pizza(request):
@@ -38,7 +38,7 @@ def new_pizza(request):
             new_pizza = form.save(commit=False)
             new_pizza.owner = request.user
             new_pizza.save()
-            return redirect('pizzas:topics')
+            return redirect('pizzas:pizzas')
 
     # Display a blank or invalid form.
     context = {'form': form}
