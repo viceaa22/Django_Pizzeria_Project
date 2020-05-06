@@ -1,0 +1,7 @@
+We’ll write a web app called Pizzeria Project that allows users to 
+create models with pizzas and add the topings they’re interested in 
+and to make entries on the toppings they like
+The Pizzeria home page will 
+describe the site and invite users to either register or log in. 
+Once logged in, a user can create new pizzas, add new toppings,
+and read and edit existing entries.
